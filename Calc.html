@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Surface Area</title>
+    <link href=".css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Calculate The Rectangles Area</h1>
+    <p>
+        <label for="fname">Side Length One:</label>
+        <input type="text" id="length" name="fname"><br><br>
+        <label for="lname">Side Width Two:</label>
+        <input type="text" id="width" name="lname"><br><br>
+        <button id="button">SUBMIT</button>
+    </p>
+    <p id="output">0</p>
+</body>
+
+<script>
+    function calculate() {
+        //input
+        let length = document.getElementById("length").value;
+        let width = document.getElementById("width").value;
+
+        //calculation
+        let area = length * width;
+
+        //output
+        document.getElementById("output").innerHTML = area;
+    }
+    //Event Listner Button 
+    var button = document.getElementById("button");
+    button.onclick = calculate;
+</script>
+
+</html>
